@@ -201,7 +201,7 @@ public class UIImageCropper: UIViewController, UIImagePickerControllerDelegate, 
         }
         layoutDone = true
 
-        if ratio < 1 {
+        if imageView.frame.width / imageView.frame.height > ratio { //if ratio < 1 {
             imageWidthConst?.constant = cropView.frame.height / ratio
             imageHeightConst?.constant = cropView.frame.height
         } else {
